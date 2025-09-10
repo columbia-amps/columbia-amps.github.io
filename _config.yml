@@ -1,0 +1,22 @@
+# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+
+title: "Columbia AMPS"
+description: "The Association of Applied Math, Applied Physics, Materials Science, and Medical Physics"
+url: "https://columbia-amps.github.io"
+baseurl: ""
+
+remote_theme: "mmistakes/minimal-mistakes"
+plugins:
+  - jekyll-include-cache
+
+# themes / colors
+minimal_mistakes_skin: "default"
+
+# automatic page defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: single
+      author_profile: true
