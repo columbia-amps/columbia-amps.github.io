@@ -1,0 +1,22 @@
+node_modules/
+.DS_Store
+.vscode/
+.idea/
+*.log
+.env
+.env.local
+
+# Jekyll build output (Docker)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Optional local config
+_config.local.yml
+
+# Ruby / Bundler files (not needed if using Docker)
+.bundle/
+vendor/
+.ruby-version
+.ruby-gemset

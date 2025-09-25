@@ -1,0 +1,33 @@
+---
+---
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">APAM</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPost">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navPost">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="/blog/">All News</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="py-5 bg-light border-bottom">
+      <div class="container">
+        <h1 class="display-6 mb-0">{{ page.title }}</h1>
+        <p class="text-muted mt-2">{{ page.date | date: "%B %d, %Y" }}</p>
+      </div>
+    </header>
+    <main class="container my-5">
+      <article class="col-lg-9">
+        {{ content }}
+      </article>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>
