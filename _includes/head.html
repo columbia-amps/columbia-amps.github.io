@@ -1,8 +1,61 @@
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- fonts and animation stuff -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --apam-bg: #0f172a;
+      --apam-accent: #4f46e5;
+      --apam-accent-2: #22d3ee;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+    }
+
+    .masthead {
+      padding: 9rem 0;
+      background: radial-gradient(1200px 500px at 20% -10%, rgba(79, 70, 229, .25), transparent),
+        radial-gradient(1200px 500px at 80% -10%, rgba(34, 211, 238, .25), transparent),
+        linear-gradient(120deg, #111827, #1f2937);
+      color: #fff;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--apam-accent), var(--apam-accent-2));
+      border: 0;
+    }
+
+    .card,
+    .list-group-item {
+      border-radius: 1rem;
+      box-shadow: 0 8px 24px rgba(2, 6, 23, .08);
+      border: 1px solid rgba(148, 163, 184, .15);
+    }
+
+    .section-pad {
+      padding: 5rem 0;
+    }
+  </style>
+  <style>
+    body {
+      padding-top: 70px;
+    }
+
+    .navbar-brand img {
+      display: block;
+      height: 28px;
+    }
+
+  </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/icons/favicon-32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/icons/favicon-16.png' | relative_url }}">
+  <meta name="theme-color" content="#0f172a">
 </head>
