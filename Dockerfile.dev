@@ -1,0 +1,13 @@
+# Solution for mac silicon users experiencing issues with local previewing
+
+FROM ruby:3.1-bookworm
+
+RUN apt-get update && apt-get install -y --no-install-recommends     build-essential git  && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /site
+
+
+RUN gem install bundler
+
+# install deps to vendor/bundle (cached in volume) and serve with livereload
+CMD bash -lc "bundle config set path vendor/bundle && bundle install && bundle exec jekyll serve --host 0.0.0.0 --livereload --force_polling"

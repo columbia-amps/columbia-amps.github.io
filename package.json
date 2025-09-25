@@ -1,0 +1,11 @@
+{
+  "name": "amps-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "docker compose up",
+    "dev:rebuild": "docker compose up --build",
+    "build": "docker compose run --rm site bundle exec jekyll build",
+    "clean": "rm -rf _site .jekyll-cache || true"
+  }
+}
