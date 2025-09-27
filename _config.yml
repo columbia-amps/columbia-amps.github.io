@@ -7,6 +7,3 @@ timezone: America/New_York
 
 plugins:
   - jekyll-feed
-
-# permalink for posts
-permalink: /blog/:year/:month/:day/:title/

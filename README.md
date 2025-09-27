@@ -11,30 +11,25 @@ Site updates and edits happen directly here on GitHub; [GitHub Pages](https://do
 
 ---
 
-## For Non-Technical Editors (no coding)
+## How to Edit the Site for Non-Technical Editors (no coding)
 
-Everything is done in the GitHub web UI. Each commit publishes the site.
+1. **Clone the repo** (you only have to do this once)
+      * Download VSCode
+      * Open the columbia-amps repo
+      * Run `git clone https://github.com/columbia-amps/columbia-amps.github.io.git`
+2. To update site content, make edits to any of the text on `index.html`
+   * To make changes to the actual site, you will need to use HTML / CSS (this is the same for making changes to the original AMPS site)
+3. **Publish / push changes** - each push makes your change appear on the actual site
 
-### Post news & updates (at `/blog/`)
-1. Go to `_posts/`, **add file**, then **create new file**  
-2. Name it `YYYY-MM-DD-<title>.md`  
-3. Paste this snippet down below and edit:
-   ```markdown
-   ---
-   layout: post
-   title: "<post title>"
-   date: <date in YYYY-MM-DD>
-   ---
-
-   Write your post here in Markdown format.
-   - Add bullets
-   - Links: [Columbia AMPS](https://<example link>.edu)
-   - Image (upload first to `assets/img/`):
-     ![Panel photo](/assets/img/<image name>.jpg)
-   ```
+In the terminal you are using to access the repo, run these 3 commands:
+```
+git add
+git commit -m “<what your change is>”
+git push
+```
+Done! You will see your new changes on https://columbia-amps.github.io/ 
 * For information on Markdown format, this is a [helpful resource](https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet).
-  
-4. Commit changes. If you need support with GitHub operations, follow this [guide](https://training.github.com/downloads/github-git-cheat-sheet/) (or ask for help).
+* If you need support with GitHub operations, follow this [guide](https://training.github.com/downloads/github-git-cheat-sheet/) (or ask for help).
 
 ### Update different sections
 #### Board:
@@ -42,14 +37,17 @@ In `index.html`, find the **Board** section and edit names/roles/emails.
 * For uploading headshots, upload them as `assets/img/board/` and update `src` with that same path in `index.html`.
 
 #### Events:
-In `index.html`, find **Events** and edit the list items:
+* To edit the **Events Calendar** section, go to `calendar.html`. There is a calendar embed URL nested under `<iframe>`
+* To edit the events on the homepage, navigate to `index.html`, find **Events**, and edit the list items
+
+e.g., 
   ```html
   <li class="list-group-item d-flex justify-content-between align-items-center">
     Coffee Chat with Alumni
     <span class="badge text-bg-primary">Oct 5, 2025 · 4:00 PM</span>
   </li>
   ```
-* You can also paste a calendar embed URL into the commented `<iframe>` in the Events section!
+
 
 #### Resources:
 In `index.html`, find **Helpful Resources**, edit link text + URLs.
@@ -117,7 +115,7 @@ bundle exec jekyll serve
 
 *Note:* Sometimes mac has errors with writing to the system Ruby. In this case, we suggest using Docker to run Jekyll.
 1. Install [Docker desktop](https://docs.docker.com/desktop/setup/install/mac-install/)
-2. Run `npm run dev`
+2. Run `npm run dev` (you will see the localhost / LiveReloader link)
 
 
 **Final step:** Navigate to http://localhost:4000/ to view the site!
