@@ -13,15 +13,11 @@ Site updates and edits happen directly here on GitHub; [GitHub Pages](https://do
 
 ## How to Edit the Site for Non-Technical Editors (no coding)
 
-1. **Clone the repo** (you only have to do this once)
-      * Download VSCode
-      * Open the columbia-amps repo
-      * Run `git clone https://github.com/columbia-amps/columbia-amps.github.io.git`
-2. To update site content, make edits to any of the text on `index.html`
+1. To update site content, make edits to any of the text on `index.html`
    * To make changes to the actual site, you will need to use HTML / CSS (this is the same for making changes to the original AMPS site)
-3. **Publish / push changes** - each push makes your change appear on the actual site
+2. **Publish / push changes** - each push makes your change appear on the actual site. If you are editing on here, simply hit "Commit changes".
 
-In the terminal you are using to access the repo, run these 3 commands:
+If you are using VSCode, you will have to push your changes. In the terminal you are using to access the repo, run these 3 commands:
 ```
 git add
 git commit -m “<what your change is>”
@@ -98,7 +94,7 @@ This is a static Bootstrap 5 homepage + Jekyll blog on GitHub Pages (no Node bui
    ```
 
 ### Local preview via bundle exec jekyll serve (optional)
-You don’t need this to edit but it's helpful for previewing changes locally. 
+The simplest method is to install the "Live Server extension by Ritwick Dey" and open `index.html` with the "Open with Live Server" option. If you run into any issues with this, you can run:
 
 ```bash
 brew install ruby
@@ -107,7 +103,7 @@ gem install bundler jekyll
 
 # a Gemfile was created in this repo
 bundler add webrick
-# you may need to run `sudo gem install commonmarker -v '0.23.12' --source 'https://rubygems.org/'`
+# you may need to run `sudo gem install commonmarker --source 'https://rubygems.org/'`
 bundle install
 
 bundle exec jekyll serve
