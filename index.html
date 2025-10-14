@@ -6,6 +6,8 @@ title: Columbia APAM
 <!doctype html>
 <html lang="en">
 
+{% include head.html %}
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,72 +17,7 @@ title: Columbia APAM
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Banner image */
-    .masthead {
-      padding: 9rem 0;
-      background:
-        linear-gradient(120deg, rgba(17, 24, 39, .85), rgba(31, 41, 55, .65)),
-        url('/assets/img/student-group-photo.jpg') center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-    }
-
-    .section-pad {
-      padding: 5rem 0;
-    }
-
-    .team-img {
-      width: 225px;
-      height: 225px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
-    .navbar-brand {
-      font-weight: 700;
-      letter-spacing: .02em;
-    }
-
-    footer {
-      padding: 2rem 0;
-    }
-  </style>
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icons/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/icons/favicon-16.png">
   <meta name="theme-color" content="#0f172a">
-
-  <style>
-    .footer-icons .icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: rgba(60, 67, 75, 0.65);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      transition: transform .15s ease, background-color .15s ease;
-    }
-
-    .footer-icons .icon,
-    .footer-icons .icon i {
-      color: #B9D9EB !important;
-    }
-
-    .footer-icons .icon:hover {
-      transform: translateY(-2px);
-      background: #000;
-    }
-
-    .footer-icons .icon i {
-      font-size: 1.25rem;
-    }
-  </style>
 
 </head>
 <!-- for editing individual sections, add/rm things in `class` for any text formatting. e.g., text-center will center a section -->
@@ -91,6 +28,9 @@ title: Columbia APAM
     <div class="container">
       <a class="navbar-brand" href="https://www.engineering.columbia.edu/">
         <img src="/assets/img/icons/cu-eng-logo.png" alt="AMPS" height="28">
+      </a>
+      <a class="navbar-brand position-absolute top-50 start-50 translate-middle">
+        <img src="/assets/img/icons/green-logo-no-bg.png" style="height:45px; width:auto; display:block;">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -118,7 +58,7 @@ title: Columbia APAM
       </h1>
       <p class="lead mt-3">The Association of Applied Math, Applied Physics, Materials Science, and Medical Physics
         Students</p>
-      <a class="btn btn-light btn-lg mt-4" href="#about">Learn more</a>
+      <a class="btn btn-light btn-lg mt-4" href="/calendar/">Upcoming AMPS Events</a>
     </div>
   </header>
 
@@ -140,7 +80,7 @@ title: Columbia APAM
             <li>Advocating on behalf of students with the department and the school</li>
             <li>Communicating with students about topics relevant to them in the broader community</li>
           </ul>
-<hr style="border: 0; height: 1px; width: 100px; background: rgba(99, 112, 125, 0.65); margin: 2rem auto;">
+          <hr style="border: 0; height: 1px; width: 100px; background: rgba(99, 112, 125, 0.65); margin: 2rem auto;">
 
           <p class="text-center text-muted justify-content-center">
             Meetings are open to all APAM graduate students and can be found on the calendar page. To become
@@ -164,29 +104,19 @@ title: Columbia APAM
             </p>
             <ul class="list-group list-group-flush shadow-sm mb-4">
               <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                AMPS Fall 2025 Coffee Chats
-                <a class="badge text-bg-primary"
-                  href="https://drive.google.com/open?id=10rANaJCybE1-SRz7l93BqajJcGyhhO7Yo6S4_Vu0Pno">Sign-Up Page</a>
-              </li>
-              <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                AMPS Mentorship Program
-                <a class="badge text-bg-primary"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSc40styRqfhRPH_u9daRuI0zpK4lUHsHvfQZjGrFwrObCzwVQ/viewform">Sign-Up
-                  Form</a>
-              </li>
-              <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                 Plasma Physics / Columbia Fusion Center Colloquium Events
-                <a class="badge text-bg-primary"
+                <a class="badge" style="background:#3ea618; color:#fff;"
                   href="https://www.apam.columbia.edu/apam-plasma-physics-columbia-fusion-center-colloquium">Schedule</a>
               </li>
               <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                 Applied Math Colloquium Events
-                <a class="badge text-bg-primary"
+                <a class="badge" style="background:#3ea618; color:#fff;"
                   href="https://www.apam.columbia.edu/applied-mathematics-colloquium-67">Schedule</a>
               </li>
               <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                 All Applied Physics & Applied Mathematics Seminars
-                <a class="badge text-bg-primary" href="https://www.apam.columbia.edu/seminars-0">Homepage</a>
+                <a class="badge" style="background:#3ea618; color:#fff;"
+                  href="https://www.apam.columbia.edu/seminars-0">Homepage</a>
               </li>
             </ul>
             <div>

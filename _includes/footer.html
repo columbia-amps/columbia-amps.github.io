@@ -13,14 +13,39 @@
         target="_blank" rel="noopener noreferrer" aria-label="Slack">
         <i class="fa-brands fa-slack"></i>
       </a>
-      <a class="icon" href="https://github.com/columbia-amps" target="_blank"
-        rel="noopener noreferrer" aria-label="GitHub">
+      <a class="icon" href="https://github.com/columbia-amps" target="_blank" rel="noopener noreferrer"
+        aria-label="GitHub">
         <i class="fa-brands fa-github"></i>
       </a>
     </div>
 
     <small>© <span id="y"></span> · AMPS · Columbia University</small>
   </div>
+
+  <style>
+    .footer-icons .icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(60, 67, 75, 0.65);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform .15s ease, background-color .15s ease;
+    }
+
+    .footer-icons .icon,
+    .footer-icons .icon i {
+      color: #98d066;
+    }
+
+    .footer-icons .icon:hover {
+      transform: translateY(-2px);
+      background: #000;
+    }
+  </style>
+
 
   <!-- Shared scripts -->
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
